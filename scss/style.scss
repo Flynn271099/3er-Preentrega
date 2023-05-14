@@ -1,0 +1,33 @@
+/* Predefinidos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+@mixin ajuste-visual {
+  display: flex;
+  height: 10%;
+  margin: 5%;
+  margin-bottom: 3px;
+}
+
+@import "./partials/body";
+@import "./partials/fuentes";
+@import "./partials/variables";
+@import "./partials/peliculas";
+@import "./partials/wiki";
+@import "./partials/home";
+@import "./partials/header";
+@import "./partials/galeria";
+@import "./partials/footer";
+
+.galeria {
+  @include ajuste-visual;
+}
+
+.imagen-wiki {
+  @include ajuste-visual;
+}

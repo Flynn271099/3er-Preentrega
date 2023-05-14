@@ -1,0 +1,379 @@
+@charset "UTF-8";
+/* Predefinidos */
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Poppins&family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Peliculas */
+/* Imagenes */
+.imagenesP {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.imagenesP img {
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.imagenesP img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+/* Wiki */
+.imagen-wiki img {
+  margin: auto;
+  width: 250px;
+  display: flex;
+  margin-top: 50px;
+}
+
+/* Texto */
+.container-info {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.container-info-textos {
+  width: 30%;
+  display: flex;
+  margin: 75px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+/* Imagen fondo HOME */
+.container-home {
+  height: 100vh;
+  background-image: url(https://www.todofondos.net/wp-content/uploads/1920x1080-Will-Smith-Wallpaper-15-1920-x-1080.jpg);
+  background-repeat: no-repeat;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 23.3em;
+  min-height: 100vh;
+  background-color: rgba(41, 32, 32, 0.722);
+}
+
+/* Header/Nav */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(1, 1, 1, 0.7);
+  padding: 0px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.header .navigation ul {
+  list-style: none;
+}
+.header .navigation ul li {
+  float: left;
+  position: relative;
+}
+.header .navigation ul li a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.header .navigation ul li a:hover {
+  background-color: #685cfe;
+}
+
+#toggle,
+.header label {
+  display: none;
+  cursor: pointer;
+}
+
+.home {
+  width: 45px;
+  height: 35px;
+}
+
+@media (max-width: 950px) {
+  .header label {
+    display: initial;
+  }
+  .header {
+    padding: 20px 10%;
+  }
+  .header .navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(1, 1, 1, 0.7);
+    display: none;
+  }
+  .header .navigation ul li {
+    width: 100%;
+  }
+  .header .navigation ul li a {
+    padding: 8px 30px 8px 10%;
+  }
+  #toggle:checked ~ .navigation {
+    display: block;
+  }
+}
+/* Galería */
+.galeria {
+  height: 10%;
+  margin: 5%;
+  margin-bottom: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  margin: 0;
+  padding: 0;
+  color: #d9d9d9;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background: rgb(29, 28, 28);
+  position: absolute;
+  bottom: 0;
+}
+
+.content1 {
+  position: relative;
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.content1 .text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #FFF;
+}
+.content1 .p {
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: rgba(28, 23, 23, 0.722);
+}
+
+.main-content {
+  display: flex;
+}
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.box .content:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: rgba(28, 23, 23, 0.722);
+}
+
+.box .content:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15%;
+  background: rgba(28, 23, 23, 0.722);
+  top: -10px;
+}
+
+.left .content p {
+  text-align: justify;
+}
+
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+.left .content .social a {
+  padding: 0 2px;
+}
+.left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: rgba(28, 23, 23, 0.722);
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.left .content .social a span:hover {
+  background: red;
+}
+
+.center .content .fas {
+  font-size: 1.4375rem;
+  background: #fff;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.center .content .fas:hover {
+  background: rgba(28, 23, 23, 0.722);
+}
+
+.center .content .text {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+  color: #fff;
+}
+
+.center .content .phone {
+  margin: 15px 0;
+}
+
+.right form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #fff;
+}
+
+.right form .msg {
+  margin-top: 10px;
+}
+
+.right form input, .right form textarea {
+  width: 100%;
+  font-size: 1.0625rem;
+  background: rgba(28, 23, 23, 0.722);
+  padding-left: 10px;
+  border: 1px solid black;
+  color: #fff;
+}
+
+.right form input:focus,
+.right form textarea:focus {
+  outline-color: #3498db;
+}
+
+.right form input {
+  height: 35px;
+}
+
+.right form .btn {
+  margin-top: 10px;
+}
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background: black;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.right form .btn button:hover {
+  background: #fff;
+}
+
+.bottom center {
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: black;
+}
+.bottom center span {
+  color: #fff;
+}
+
+.bottom center a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bottom center a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    position: absolute;
+    bottom: 0px;
+  }
+  .main-content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box {
+    margin: 5px 0;
+  }
+}
+input {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  outline: none;
+  outline: none;
+}
+
+/*# sourceMappingURL=style.css.map */
