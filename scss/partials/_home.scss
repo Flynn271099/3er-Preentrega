@@ -11,6 +11,13 @@
     margin: 75px;
     flex-direction: column;
     gap: 20px;
+
+    @media screen and (max-width:426px) {
+      .container-info-textos {
+        width: 30%;
+        display: flex;
+      }
+    }
   }
 
 .text {
@@ -27,8 +34,9 @@ li a:hover:not(.active) {
 /* Imagen fondo HOME */
 
 .container-home {
-    height: 100vh;
     background-image: url(https://www.todofondos.net/wp-content/uploads/1920x1080-Will-Smith-Wallpaper-15-1920-x-1080.jpg);
     background-repeat: no-repeat;
   }
+
+
 

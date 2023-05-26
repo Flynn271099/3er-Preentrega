@@ -10,6 +10,16 @@
   box-sizing: inherit;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 23.3em;
+  min-height: 100vh;
+  background-color: rgba(41, 32, 32, 0.722);
+}
+
 /* Peliculas */
 /* Imagenes */
 .imagenesP {
@@ -35,9 +45,7 @@
 
 /* Wiki */
 .imagen-wiki img {
-  margin: auto;
   width: 250px;
-  display: flex;
   margin-top: 50px;
 }
 
@@ -55,8 +63,14 @@
   flex-direction: column;
   gap: 20px;
 }
+@media screen and (max-width: 426px) {
+  .container-info-textos .container-info-textos {
+    width: 30%;
+    display: flex;
+  }
+}
 
-.text {
+.text, .center .content .text {
   display: block;
   color: white;
   text-align: center;
@@ -70,19 +84,8 @@ li a:hover:not(.active) {
 
 /* Imagen fondo HOME */
 .container-home {
-  height: 100vh;
   background-image: url(https://www.todofondos.net/wp-content/uploads/1920x1080-Will-Smith-Wallpaper-15-1920-x-1080.jpg);
   background-repeat: no-repeat;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-  box-sizing: border-box;
-  position: relative;
-  padding-bottom: 23.3em;
-  min-height: 100vh;
-  background-color: rgba(41, 32, 32, 0.722);
 }
 
 /* Header/Nav */
@@ -156,10 +159,6 @@ body {
 }
 /* Galería */
 .galeria {
-  height: 10%;
-  margin: 5%;
-  margin-bottom: 3px;
-  display: flex;
   flex-direction: column;
   gap: 5px;
   justify-content: center;
@@ -185,7 +184,7 @@ footer {
   text-align: center;
   padding: 0 20px;
 }
-.content1 .text {
+.content1 .text, .content1 .center .content .text, .center .content .content1 .text {
   font-size: 2.5rem;
   font-weight: 600;
   color: #FFF;
@@ -275,18 +274,17 @@ footer {
   background: rgba(28, 23, 23, 0.722);
 }
 
+/*Uso del extend*/
 .center .content .text {
   font-size: 1.0625rem;
-  font-weight: 500;
   padding-left: 10px;
-  color: #fff;
 }
 
 .center .content .phone {
   margin: 15px 0;
 }
 
-.right form .text {
+.right form .text, .right form .center .content .text, .center .content .right form .text {
   font-size: 1.0625rem;
   margin-bottom: 2px;
   color: #fff;
@@ -358,10 +356,6 @@ footer {
     position: absolute;
     bottom: 0px;
   }
-  .main-content {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
   .main-content .box {
     margin: 5px 0;
   }
@@ -374,6 +368,20 @@ input {
 textarea {
   outline: none;
   outline: none;
+}
+
+.galeria {
+  display: flex;
+  height: 10%;
+  margin: 5%;
+  margin-bottom: 3px;
+}
+
+.imagen-wiki {
+  display: flex;
+  height: 10%;
+  margin: 5%;
+  margin-bottom: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */
